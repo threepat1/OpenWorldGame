@@ -100,15 +100,15 @@ LineRenderer:
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 65535
+      ctime1: 41056
       ctime2: 0
       ctime3: 0
       ctime4: 0
       ctime5: 0
       ctime6: 0
       ctime7: 0
-      atime0: 51272
-      atime1: 65535
+      atime0: 0
+      atime1: 41441
       atime2: 65535
       atime3: 0
       atime4: 0
@@ -201,7 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0c5bf1b802afb54ab2af81c4af15d62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 5
   speed: 50
-  bulletHolePrefab: {fileID: 2269384606981780311, guid: 50f4755526d5f3042b32ad954c9a23b8,
+  effectPrefab: {fileID: 1715788015899914031, guid: 20e4effb85cffb345bd3433a74be1d0b,
     type: 3}
   line: {fileID: 3623034551112393359}
