@@ -7,9 +7,9 @@ namespace Projectiles.Effects
     public class Fire : Effect
     {
         // Start is called before the first frame update
-        public override void RunEffect()
+        public override void RunEvent()
         {
-
+            throw new System.NotImplementedException();
         }
     }
 }

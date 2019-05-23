@@ -4,16 +4,9 @@ using UnityEngine;
 
 namespace Projectiles.Effects
 {
-    public class Impact : Effect
+    public abstract class Projectile : MonoBehaviour
     {
-        public override void RunEffect()
-        {
-            IHealth health = hitObject.GetComponent<IHealth>();
-            if(health != null)
-            {
-                health.TakeDamage(damage);
-            }
-
-        }
+        public int damage = 5;
+        public abstract void Fire(Vector3 origin, Vector3 direction);
     }
 }
