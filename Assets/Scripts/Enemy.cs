@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour, IHealth
     public int health = 100;
     NavMeshAgent agent;
 
+    public float targetDistance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,11 @@ public class Enemy : MonoBehaviour, IHealth
     void Update()
     {
         agent.SetDestination(target.position);
+        targetDistance = Vector3.Distance(target.position, transform.position);
+        if (targetDistance < 1.8f)
+        {
+            attack();
+        }
     }
     public void Heal(int heal)
     {
@@ -33,6 +40,17 @@ public class Enemy : MonoBehaviour, IHealth
         if (health <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+    public void attack()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        {
+            if (hit.collider.gameObject.tag == "Player")
+            {
+                print("yeahhhh");
+            }
         }
     }
 }
